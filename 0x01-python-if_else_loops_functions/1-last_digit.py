@@ -2,8 +2,14 @@
 import random
 number = random.randint(-10000, 10000)
 
+# Get the absolute value of number
+abs_number = abs(number)
 # Get the last digit of the number
-last_digit = number % 10
+last_digit = abs_number % 10
+
+#Check if the number is negative
+if number < 0:
+    last_digit = -1 * last_digit
 
 # first string to be concatinated with the conditioned string
 pre_string = f"Last digit of {number} is {last_digit} "
