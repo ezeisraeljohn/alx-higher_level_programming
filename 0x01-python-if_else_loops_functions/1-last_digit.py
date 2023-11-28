@@ -7,7 +7,7 @@ abs_number = abs(number)
 # Get the last digit of the number
 last_digit = abs_number % 10
 
-#Check if the number is negative
+# Check if the number is negative
 if number < 0:
     last_digit = -1 * last_digit
 
