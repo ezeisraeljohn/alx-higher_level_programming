@@ -12,9 +12,9 @@ def max_integer(my_list=[]):
     if not my_list:
         return None
 
-    max = 0
+    max_value = int(my_list[0])
     for item in my_list:
-        if item > max:  # assign item to max if it is greater than max
-            max = item
+        if item > max_value:  # assign item to max if it is greater than max
+            max_value = item
 
-    return max
+    return max_value
