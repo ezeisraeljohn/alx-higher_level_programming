@@ -2,8 +2,9 @@
 
 def delete_at(my_list=[], idx=0):
     """ Function that deletes an item of a list at a given idx position
-        arg:
+        args:
         my_list
+        idx
 
         Return: The list with the item removed
     """
