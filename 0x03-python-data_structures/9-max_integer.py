@@ -14,7 +14,7 @@ def max_integer(my_list=[]):
 
     max = 0
     for item in my_list:
-        if int(item) > max:  # assign item to max if it is greater than max
+        if item > max:  # assign item to max if it is greater than max
             max = item
 
     return max
