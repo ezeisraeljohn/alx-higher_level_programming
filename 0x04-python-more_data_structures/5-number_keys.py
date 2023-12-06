@@ -13,6 +13,4 @@ def number_keys(a_dictionary):
     if not a_dictionary:
         return 0
 
-    a_dictionary_set = set(a_dictionary)
-
-    return len(a_dictionary_set)
+    return len(set(a_dictionary))
