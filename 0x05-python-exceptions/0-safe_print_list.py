@@ -9,7 +9,7 @@ def safe_print_list(my_list=[], x=0):
 
     try:
         for index in range(x):
-            print(f"{my_list[index]}", end="")
+            print("{}".format(my_list[index]), end="")
         print()
 
     except IndexError:
