@@ -109,13 +109,21 @@ class Rectangle():
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """A static method that checks for largest rectangle"""
-        if rect_1.height * rect_1.width > rect_2.width * rect_2.height:
+        if rect_1.height * rect_1.width >= rect_2.width * rect_2.height:
             return rect_1
         else:
             return rect_2
 
     @classmethod
     def square(cls, size=0):
-        """A class method that returns a square"""
-        new_instance = Rectangle(size, size)
+        """A class method that returns a square instance"""
+        width = size
+        height = size
+
+        if width < 0:
+            raise ValueError("width must be >= 0")
+        if height < 0:
+            raise ValueError("height must be >= 0")
+
+        new_instance = Rectangle(width, height)
         return new_instance
