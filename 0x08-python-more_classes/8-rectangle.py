@@ -109,7 +109,7 @@ class Rectangle():
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """A static method that checks for largest rectangle"""
-        if rect_1.height * rect_1.width > rect_2.width * rect_2.height:
+        if rect_1.height * rect_1.width >= rect_2.width * rect_2.height:
             return rect_1
         else:
             return rect_2
