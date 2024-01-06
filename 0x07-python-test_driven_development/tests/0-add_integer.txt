@@ -1,0 +1,33 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(1, 2)
+3
+
+>>> add_integer(3, 4)
+7
+
+
+>>> add_integer(1, 3)
+4
+
+>>> add_integer(1, 3.443)
+4
+
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+
+>>> try:
+...    add_integer(2, "333")
+... except Exception as e:
+...    print(e)
+...
+b must be an integer
+
+>>> try:
+...    add_integer("2", 333)
+... except Exception as e:
+...    print(e)
+...
+a must be an integer
