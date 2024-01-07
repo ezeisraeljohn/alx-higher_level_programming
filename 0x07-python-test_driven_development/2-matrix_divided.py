@@ -6,25 +6,35 @@
         passed as the second arguement of the function
 """
 
+
 def matrix_divided(matrix, div):
     """Function That divides each element of a matrix by a number
         args:
             matrix(list of list): This is the list of the matrix
             div(int): Number to divide elements of matrix with
-        
+
         Description: This function divides each element of the matrix,
                      and then the result will be in two decimal places
-        
+
+        Raise:
+            TypeError: raise a type error if the matrix is not a list, or if
+                       The values of the matrix are not all integers or floats
+                       or if the lists of the matrixs are not of same size
+
+            ZeroDivisionError: raises this type of exception when the value
+                               of the divisor is zero
+
         Return: A new matrix containing the division
     """
-    if not matrix:
-        return matrix
+    if not matrix or len(matrix) == 0:
+        raise TypeError("matrix must be a matrix (list of lists)"
+                        " of integers/floats")
 
     if div == 0:
         raise TypeError("division by zero")
-    
+
     if not isinstance(div, (int, float)):
-        raise TypeError("div must be an integer or float")
+        raise ZeroDivisionError("div must be an integer or float")
 
     new_matrix = [row[:] for row in matrix]
     length_matrix = len(new_matrix[0])
