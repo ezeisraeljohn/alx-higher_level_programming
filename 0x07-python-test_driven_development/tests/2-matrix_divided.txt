@@ -13,8 +13,13 @@
 Each row of the matrix must have the same size
 
 ## Test 3 
->>> matrix_divided([], 2)
-[]
+>>> try:
+...    matrix_divided([], 2)
+... except Exception as e:
+...    print(e)
+...
+matrix must be a matrix (list of lists) of integers/floats
+
 
 ## Test 4
 >>> matrix_divided([[], [], []], 2)
@@ -28,3 +33,11 @@ Each row of the matrix must have the same size
 ...     print(e)
 ... 
 matrix must be a matrix (list of lists) of integers/floats
+
+>>> try:
+...    matrix_divided([], 2)
+... except Exception as e:
+...    print(e)
+...
+matrix must be a matrix (list of lists) of integers/floats
+
