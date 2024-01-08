@@ -1,0 +1,8 @@
+>>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+>>> try:
+...   matrix_mul("a", "b")
+... except Exception as e:
+...   print(e)
+...
+m_a must be a list of lists
