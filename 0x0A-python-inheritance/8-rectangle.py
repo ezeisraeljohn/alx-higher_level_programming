@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-""" Module that contains an empty class"""
+""" Module that contains The BaseGeometry class """
 
 
 class BaseGeometry():
@@ -24,7 +24,7 @@ class BaseGeometry():
         # if not isinstance(name, str):
         #     raise TypeError("must be a string")
 
-        if not isinstance(value, int):
+        if not type(value) is not int:
             raise TypeError(f"{name} must be an integer")
 
         if value <= 0:
