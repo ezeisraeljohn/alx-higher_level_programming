@@ -12,4 +12,3 @@ class MyList(list):
             if not isinstance(self[i], int):
                 raise TypeError("must be a list of integers")
         print(sorted(self))
-
