@@ -21,7 +21,8 @@ class BaseGeometry():
                 name(str): The string
                 value(int): The int
         """
-        name = str(name)
+        if not isinstance(name, str):
+            return
 
         if not isinstance(value, int):
             raise TypeError(f"{name} must be an integer")
