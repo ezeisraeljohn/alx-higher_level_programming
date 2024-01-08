@@ -1,0 +1,10 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> bg = BaseGeometry()
+
+>>> try:
+...    bg.integer_validator("name", "John")
+... except Exception as e:
+...    print(e)
+...
+name must be an integer
