@@ -8,8 +8,43 @@
 m_a must be a list of lists
 
 >>> try:
-...    matrix_mul([[1,2,3,3],[1,2,3]], [[],[]])
+...    matrix_mul([[1,2,3],[1,2,3]], [[],[]])
 ... except Exception as e:
 ...    print(e)
 ...
 m_b can't be empty
+
+>>> try:
+...   matrix_mul([[1,3,4],[1,3,"3",2,4]], [[1],[1],[1]])
+... except Exception as e:
+...   print(e)
+...
+m_a should contain only integers or floats
+
+>>> try:
+...   matrix_mul([[1,3,4],[1,3,4]], [[1],["1"],[1]])
+... except Exception as e:
+...   print(e)
+...
+m_b should contain only integers or floats
+
+>>> try:
+...   matrix_mul([[1,3,4],[1,3,2,4]], [[1],["1"],[1]])
+... except Exception as e:
+...   print(e)
+...
+each row of m_a must be of the same size
+
+>>> try:
+...   matrix_mul([[1,3,4],[1,3,4]], [[1],[1, 2],[1]])
+... except Exception as e:
+...   print(e)
+...
+each row of m_b must be of the same size
+
+>>> try:
+...   matrix_mul([[1,3,4,5],[1,3,4,6]], [[1],[1],[1]])
+... except Exception as e:
+...   print(e)
+...
+m_a and m_b can't be multiplied
