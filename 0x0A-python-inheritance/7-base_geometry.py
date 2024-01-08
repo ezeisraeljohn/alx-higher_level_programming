@@ -11,7 +11,11 @@ class BaseGeometry():
     """
 
     def area(self):
-        """ Unimplemented area """
+        """ Unimplemented area
+
+            Raises:
+                Exception: Always
+        """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
@@ -20,12 +24,15 @@ class BaseGeometry():
             args:
                 name(str): The string
                 value(int): The int
+
+            Raises:
+                TypeError: When not int
+                ValueError: when less than or equal to 0
         """
         # if not isinstance(name, str):
         #     raise TypeError("must be a string")
 
-        if not isinstance(value, int):
-            raise TypeError(f"{name} must be an integer")
-
+        if type(value) is not int:
+            raise TypeError("{} must be an integer".format(name))
         if value <= 0:
-            raise TypeError(f"{name} must be greater than 0")
+            raise ValueError("{} must be greater than 0".format(name))
