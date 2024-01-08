@@ -6,3 +6,10 @@
 ...   print(e)
 ...
 m_a must be a list of lists
+
+>>> try:
+...    matrix_mul([[1,2,3,3],[1,2,3]], [[],[]])
+... except Exception as e:
+...    print(e)
+...
+m_b can't be empty
