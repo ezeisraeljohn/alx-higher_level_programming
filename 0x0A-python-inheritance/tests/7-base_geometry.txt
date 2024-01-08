@@ -8,3 +8,6 @@
 ...    print(e)
 ...
 name must be an integer
+
+>>> bg.integer_validator("Width", 13)
+>>> bg.integer_validator("Height", 32)
