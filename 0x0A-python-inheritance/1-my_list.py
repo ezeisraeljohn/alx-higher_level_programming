@@ -8,4 +8,8 @@ class MyList(list):
 
     def print_sorted(self):
         """ Function that prints sorts a list """
+        for i in range(len(self)):
+            if not isinstance(self[i], int):
+                raise TypeError("must be a list of integers")
         print(sorted(self))
+
