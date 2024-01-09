@@ -3,7 +3,7 @@
 """ Module that demostrate the python read method """
 
 
-def read_file(filename):
+def read_file(filename=""):
     """ Function that reads a file
 
         Args:
