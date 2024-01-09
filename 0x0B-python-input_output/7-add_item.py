@@ -15,4 +15,3 @@ filename = 'add_item.json'
 save_to_json_file(json_list, filename)
 
 result = load_from_json_file(filename)
-print(result)
