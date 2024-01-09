@@ -4,6 +4,7 @@
 
 
 class MyInt(int):
+    """The class that inherites from the int class"""
     def __eq__(self, other):
         """Override the equality operator (==)"""
         return super().__ne__(other)
