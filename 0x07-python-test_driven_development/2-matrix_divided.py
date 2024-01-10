@@ -31,10 +31,10 @@ def matrix_divided(matrix, div):
                         " of integers/floats")
 
     if div == 0:
-        raise TypeError("division by zero")
+        raise ZeroDivisionError("division by zero")
 
     if not isinstance(div, (int, float)):
-        raise ZeroDivisionError("div must be an integer or float")
+        raise TypeError("div must be a number")
 
     new_matrix = [row[:] for row in matrix]
     length_matrix = len(new_matrix[0])
