@@ -19,3 +19,6 @@ if path.isfile(filename):
         for item in json_list:
             line.append(item)
         save_to_json_file(line, filename)
+else:
+    save_to_json_file(json_list, filename)
+    load_from_json_file(filename)
