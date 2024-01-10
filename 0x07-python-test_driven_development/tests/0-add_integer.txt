@@ -38,3 +38,17 @@ a must be an integer
 ...    print(e)
 ...
 a must be an integer
+
+>>> try:
+...    add_integer(2, float("NaN"))
+... except Exception as e:
+...    print(e)
+...
+cannot convert float NaN to integer
+
+>>> try:
+...    add_integer(1)
+... except Exception as e:
+...    print(e)
+...
+99
