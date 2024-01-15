@@ -7,7 +7,25 @@ from models.base import Base
 
 
 class Rectangle(Base):
+    """ The Rectangle Class
+
+        Args:
+            width(int): The width of the rectangle
+            height(int): The height of the rectangle
+            x(int): The x coordinate of the rectangle
+            y(int): The y coordinate of the rectangle
+
+        methods:
+            update: This function overwrite the already existing attribute
+            dictionary: That returns the dictionary of an instance
+
+        Raises:
+            TypeError: This is raised when any of the attribute is not integer
+            ValueError: Raised when x or y is less than zero or weight or
+                        height is less than or equal to zero
+    """
     def __init__(self, width, height, x=0, y=0, id=None):
+        """ Initializer method """
         super().__init__(id)
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
@@ -33,10 +51,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """ getter width"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """ The width setter"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -46,10 +66,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """ The height getter"""
         return self.__height
 
     @width.setter
     def height(self, value):
+        """ The height setter """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -59,10 +81,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """ The x gettter """
         return self.__x
 
     @x.setter
     def x(self, value):
+        """ The x setter"""
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
         if value < 0:
@@ -72,10 +96,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """ The y getter"""
         return self.__y
 
     @y.setter
     def y(self, value):
+        """ The y setter"""
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         if value < 0:
@@ -125,5 +151,5 @@ class Rectangle(Base):
                     setattr(self, attr, value)
 
     def to_dictionary(self):
+        """ Return the dictionary of an instance"""
         dic = {}
-        
