@@ -21,9 +21,13 @@ class TestRectangleClass(unittest.TestCase):
         """ The teardown method"""
         pass
 
-    def test_no_arguement(self):
+    def test_unrecognized_class_arg(self):
         with self.assertRaises(TypeError):
-            ractangle = Rectangle()
+            Rectangle(1, 3, 4, 3, 4, 2)
+
+    def test_no_class_arguement(self):
+        with self.assertRaises(TypeError):
+            Rectangle()
 
     def test_skip_width_arg(self):
         with self.assertRaises(TypeError):
@@ -139,10 +143,6 @@ class TestRectangleClass(unittest.TestCase):
             "[Rectangle] (89) 10/10 - 10/10"
         )
 
-    def test_unrecognized_class_arg(self):
-        with self.assertRaises(TypeError):
-            Rectangle(1, 3, 4, 3, 4, 2)
-
     def test_unrecognized_display_arg(self):
         with self.assertRaises(TypeError):
             self.rectangle1.display(3)
@@ -153,3 +153,13 @@ class TestRectangleClass(unittest.TestCase):
             str(self.rectangle1),
             "[Rectangle] (1) 4/1 - 2/3"
         )
+
+    def test_to_dictionary_value(self):
+        self.assertEqual(
+            self.rectangle1.to_dictionary(),
+            {'id': 12, 'width': 4, 'height': 4, 'x': 2, 'y': 1}
+        )
+
+    def test_unrecognized_to_dictionary_arg(self):
+        with self.assertRaises(TypeError):
+            self.rectangle1.to_dictionary(2, 1)
