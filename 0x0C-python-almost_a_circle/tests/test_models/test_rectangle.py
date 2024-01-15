@@ -121,3 +121,12 @@ class TestRectangleClass(unittest.TestCase):
         """The test_overide_str2 method"""
         self.assertEqual(str(Rectangle(1, 1, 1, 1, 1)),
                          "[Rectangle] (1) 1/1 - 1/1")
+        
+    def test_area(self):
+        """ The test_area module"""
+        self.assertEqual(self.rectangle1.area(), 24)
+
+    def test_unrecognized_area_arg(self):
+        "The Unrecognized_area_arg method"
+        with self.assertRaises(TypeError):
+            self.rectangle1.area(2)
