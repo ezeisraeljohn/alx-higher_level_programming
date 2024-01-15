@@ -82,6 +82,21 @@ class TestRectangleClass(unittest.TestCase):
         with self.assertRaises(TypeError):
             self.rectangle2.height = "b"
 
+    def test_set_not_isinstance_x(self):
+        """The test_set_not_isinstance_x method"""
+        with self.assertRaises(TypeError):
+            self.rectangle2.x = "l"
+
+    def test_set_not_isinstance_y(self):
+        """The test_set_not_isinstance_y method"""
+        with self.assertRaises(TypeError):
+            self.rectangle2.y ="j"
+
+    def test_set_not_zero_height(self):
+        """The test_set_not_zero_height method"""
+        with self.assertRaises(ValueError):
+            self.rectangle3.height = 0
+
     def test_set_not_zero_width(self):
         """The test_set_not_zero_width method"""
         with self.assertRaises(ValueError):
