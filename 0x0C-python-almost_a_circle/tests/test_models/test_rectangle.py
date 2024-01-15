@@ -15,6 +15,7 @@ class TestRectangleClass(unittest.TestCase):
         self.rectangle1 = Rectangle(4, 6, 2, 1, 12)
         self.rectangle2 = Rectangle(1, 1)
         self.rectangle3 = Rectangle(1, 1)
+        self.rectangle4 = Rectangle(10, 10, 10, 10)
 
     def tearDown(self):
         """ The teardown method"""
@@ -130,3 +131,10 @@ class TestRectangleClass(unittest.TestCase):
         """The Unrecognized_area_arg method"""
         with self.assertRaises(TypeError):
             self.rectangle1.area(2)
+
+    def test_update_values(self):
+        self.rectangle4.update(89)
+        self.assertEqual(
+            str(self.rectangle4),
+            "[Rectangle] (89) 10/10 - 10/10"
+        )
