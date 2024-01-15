@@ -91,7 +91,7 @@ class TestRectangleClass(unittest.TestCase):
     def test_set_not_isinstance_y(self):
         """The test_set_not_isinstance_y method"""
         with self.assertRaises(TypeError):
-            self.rectangle2.y ="j"
+            self.rectangle2.y = "j"
 
     def test_set_not_zero_height(self):
         """The test_set_not_zero_height method"""
@@ -122,7 +122,7 @@ class TestRectangleClass(unittest.TestCase):
         """The test_overide_str2 method"""
         self.assertEqual(str(Rectangle(1, 1, 1, 1, 1)),
                          "[Rectangle] (1) 1/1 - 1/1")
-        
+
     def test_area(self):
         """ The test_area module"""
         self.assertEqual(self.rectangle1.area(), 24)
