@@ -1,8 +1,8 @@
-import unittest
-
+#!/usr/bin/python3
 """ The test module for the different tests for the Rectangle Class"""
 
 
+import unittest
 from models.rectangle import Rectangle
 
 
