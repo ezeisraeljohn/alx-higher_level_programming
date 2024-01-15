@@ -89,14 +89,37 @@ class Rectangle(Base):
 
     def display(self):
         """Function that prints area of the rectangle with Squares"""
-        if self.__width or self.__height == 0:
+        if self.__width and self.__height and self.__x and self.__y == 0:
             print(end="")
+
+        for i in range(self.__y):
+            print()
 
         for i in range(self.__height):
             for j in range(self.__width):
+                for l in range(self.__x):
+                    print(" ", end="")
                 print("#", end="")
             print()
 
     def __str__(self):
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "
                 f"{self.__width}/{self.__height}")
+
+    def update(self, *args, **kwargs):
+        """ Updating attributes methods
+        
+        Args:
+            args(int): The integer arguements to update attribute with
+
+        """
+        if args:
+            attrs = ['id', 'width', 'height', 'x', 'y']
+            for attr, value in zip(attrs, args):
+                if hasattr(self, attr):
+                    setattr(self, attr, value)
+
+        else:
+            for attr, value in kwargs.items():
+                if hasattr(self, attr):
+                    setattr(self, attr, value)
