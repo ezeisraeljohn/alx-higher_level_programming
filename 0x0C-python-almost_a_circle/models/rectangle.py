@@ -8,6 +8,7 @@ from models.base import Base
 
 class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
+        super().__init__(id)
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if not isinstance(height, int):
@@ -29,7 +30,6 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
-        self.id = id
 
     @property
     def width(self):
@@ -88,16 +88,16 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        """Function that prints area of the rectangle with Squares"""
+        """Function that prints area of the rectangle with Hashes"""
         if self.__width and self.__height and self.__x and self.__y == 0:
             print(end="")
 
         for i in range(self.__y):
             print()
 
-        for i in range(self.__height):
-            for j in range(self.__width):
-                for l in range(self.__x):
+        for _ in range(self.__height):
+            for _ in range(self.__width):
+                for _ in range(self.__x):
                     print(" ", end="")
                 print("#", end="")
             print()
@@ -108,7 +108,7 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """ Updating attributes methods
-        
+
         Args:
             args(int): The integer arguements to update attribute with
 
@@ -123,3 +123,7 @@ class Rectangle(Base):
             for attr, value in kwargs.items():
                 if hasattr(self, attr):
                     setattr(self, attr, value)
+
+    def to_dictionary(self):
+        dic = {}
+        
