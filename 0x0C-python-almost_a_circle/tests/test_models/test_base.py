@@ -19,3 +19,7 @@ class TestBaseClass(unittest.TestCase):
     def test_accessing_nb_objects(self):
         with self.assertRaises(AttributeError):
             Base.__nb_objects
+
+    def test_passing_unrequired_arg(self):
+        with self.assertRaises(TypeError):
+            Base(3, 2)
