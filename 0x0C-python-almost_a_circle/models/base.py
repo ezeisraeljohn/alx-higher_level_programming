@@ -5,7 +5,7 @@
 
 class Base():
     """ The base class of this project
-        
+
         Attributes:
             class_attributes:
                 __nb_objects(int): The first instance variable
