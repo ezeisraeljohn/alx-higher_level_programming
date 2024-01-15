@@ -138,3 +138,18 @@ class TestRectangleClass(unittest.TestCase):
             str(self.rectangle4),
             "[Rectangle] (89) 10/10 - 10/10"
         )
+
+    def test_unrecognized_class_arg(self):
+        with self.assertRaises(TypeError):
+            Rectangle(1, 3, 4, 3, 4, 2)
+
+    def test_unrecognized_display_arg(self):
+        with self.assertRaises(TypeError):
+            self.rectangle1.display(3)
+
+    def test_update_value(self):
+        self.rectangle1.update(1, 2, 3, 4)
+        self.assertEqual(
+            str(self.rectangle1),
+            "[Rectangle] (1) 4/1 - 2/3"
+        )
