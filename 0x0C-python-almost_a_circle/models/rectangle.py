@@ -14,7 +14,7 @@ class Rectangle(Base):
             raise TypeError("height must be an integer")
         if not isinstance(x, int):
             raise TypeError("x must be an integer")
-        if not isinstance(y,int):
+        if not isinstance(y, int):
             raise TypeError("y must be an integer")
 
         if width <= 0:
@@ -90,7 +90,7 @@ class Rectangle(Base):
     def display(self):
         """Function that prints area of the rectangle with Squares"""
         if self.__width or self.__height == 0:
-            print()
+            print(end="")
 
         for i in range(self.__height):
             for j in range(self.__width):
