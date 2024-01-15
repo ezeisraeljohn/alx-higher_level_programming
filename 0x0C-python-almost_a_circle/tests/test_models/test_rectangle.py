@@ -127,6 +127,6 @@ class TestRectangleClass(unittest.TestCase):
         self.assertEqual(self.rectangle1.area(), 24)
 
     def test_unrecognized_area_arg(self):
-        "The Unrecognized_area_arg method"
+        """The Unrecognized_area_arg method"""
         with self.assertRaises(TypeError):
             self.rectangle1.area(2)
