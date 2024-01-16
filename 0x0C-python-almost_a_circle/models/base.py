@@ -63,7 +63,7 @@ class Base():
         dummy = cls(1, 5)
         dummy.update(**dictionary)
         return dummy
-    
+
     @classmethod
     def load_from_file(cls):
         if not os.path.isfile(f'{cls.__name__}.json'):
@@ -72,4 +72,4 @@ class Base():
             with open(f'{cls.__name__}.json', 'r', encoding='utf-8') as file:
                 instances = file.readline()
                 cls.from_json_string(instances)
-                return [instance for instance in instances]    
+                return [instance for instance in instances]
