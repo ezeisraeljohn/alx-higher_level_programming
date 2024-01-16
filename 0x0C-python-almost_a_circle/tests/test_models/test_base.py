@@ -30,20 +30,20 @@ class TestBaseClass(unittest.TestCase):
         """ The test_passing_unrequired_arg method"""
         with self.assertRaises(TypeError):
             Base(3, 2)
-  
-    # def test_from_json_string(self):
-    #     """ The test_from_json_string method"""
-    #     # Test case when the input is a valid JSON string
-    #     json_str = '[{"name": "John", "age": 25},{"name": "Alice", "age": 30}]'
-    #     result = Base.from_json_string(json_str)
-    #     expected_result = [{'name': 'John', 'age': 25},
-    #                        {'name': 'Alice', 'age': 30}]
-    #     self.assertEqual(result, expected_result)
 
-    #     # Test case when the input is an empty JSON string
-    #     result_empty = Base.from_json_string('')
-    #     self.assertEqual(result_empty, [])
+    def test_from_json_string(self):
+        """ The test_from_json_string method"""
+        # Test case when the input is a valid JSON string
+        json_str = '[{"name": "John", "age": 25},{"name": "Alice", "age": 30}]'
+        result = Base.from_json_string(json_str)
+        expected_result = [{'name': 'John', 'age': 25},
+                           {'name': 'Alice', 'age': 30}]
+        self.assertEqual(result, expected_result)
 
-    #     # Test case when the input is None
-    #     result_none = Base.from_json_string(None)
-    #     self.assertEqual(result_none, [])
+        # Test case when the input is an empty JSON string
+        result_empty = Base.from_json_string('')
+        self.assertEqual(result_empty, [])
+
+        # Test case when the input is None
+        result_none = Base.from_json_string(None)
+        self.assertEqual(result_none, [])
