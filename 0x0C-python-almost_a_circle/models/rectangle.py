@@ -69,7 +69,7 @@ class Rectangle(Base):
         """ The height getter"""
         return self.__height
 
-    @width.setter
+    @height.setter
     def height(self, value):
         """ The height setter """
         if not isinstance(value, int):
