@@ -152,4 +152,6 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """ Return the dictionary of an instance"""
-        dic = {}
+        attrs = ['id', 'width', 'height', 'x', 'y']
+        return {attr: getattr(self, attr) for attr in attrs
+                if hasattr(self, attr)}
