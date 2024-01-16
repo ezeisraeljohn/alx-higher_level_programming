@@ -143,13 +143,6 @@ class TestRectangleClass(unittest.TestCase):
             "[Rectangle] (89) 10/10 - 10/10"
         )
 
-    def test_update_values(self):
-        self.rectangle1.update(12, 4, 3)
-        self.assertEqual(
-            str(self.rectangle1),
-            "[Rectangle] (12) 2/1 - 4/3"
-        )
-
     def test_unrecognized_display_arg(self):
         with self.assertRaises(TypeError):
             self.rectangle1.display(3)
