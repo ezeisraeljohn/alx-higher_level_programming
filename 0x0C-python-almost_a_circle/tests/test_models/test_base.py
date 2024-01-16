@@ -39,3 +39,4 @@ class TestBaseClass(unittest.TestCase):
         # Test case when the input is None
         result_none = Base.from_json_string(None)
         self.assertEqual(result_none, [])
+        
