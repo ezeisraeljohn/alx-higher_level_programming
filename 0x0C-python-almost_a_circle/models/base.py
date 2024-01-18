@@ -74,3 +74,26 @@ class Base():
                 json_string = file.readline()
                 instance_list = cls.from_json_string(json_string)
                 return [cls.create(**instance) for instance in instance_list]
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ Class that saves to a file
+            Args:
+                list_objs: The list of objects to be converted to dictionary
+        """
+        dic_list = [obj.to_dictionary() for obj in list_objs]
+        cls.to_json_string(dic_list)
+
+        with open(f'{cls.__name__}.csv', 'w', encoding='utf-8') as file:
+            json.dump(dic_list, file)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ Function that loads from a file """
+        if not os.path.isfile(f'{cls.__name__}.csv'):
+            return []
+        else:
+            with open(f'{cls.__name__}.csv', 'r', encoding='utf-8') as file:
+                json_string = file.readline()
+                instance_list = cls.from_json_string(json_string)
+                return [cls.create(**instance) for instance in instance_list]
