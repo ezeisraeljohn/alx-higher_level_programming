@@ -66,6 +66,7 @@ class Base():
 
     @classmethod
     def load_from_file(cls):
+        """ Function that loads from a file """
         if not os.path.isfile(f'{cls.__name__}.json'):
             return []
         else:
