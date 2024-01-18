@@ -71,6 +71,6 @@ class Base():
             return []
         else:
             with open(f'{cls.__name__}.json', 'r', encoding='utf-8') as file:
-                instances = file.readline()
-                cls.from_json_string(instances)
-                return [instance for instance in instances]
+                json_string = file.readline()
+                instance_list = cls.from_json_string(json_string)
+                return [cls.create(**instance) for instance in instance_list]
