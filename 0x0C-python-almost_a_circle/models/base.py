@@ -31,7 +31,7 @@ class Base():
     def to_json_string(list_dictionaries):
         """Converts list_dictionaries to json serializaion"""
         if list_dictionaries is None or not list_dictionaries:
-            return []
+            return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
