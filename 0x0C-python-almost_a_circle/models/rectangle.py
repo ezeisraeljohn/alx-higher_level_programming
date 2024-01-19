@@ -118,15 +118,12 @@ class Rectangle(Base):
         if self.__width and self.__height and self.__x and self.__y == 0:
             print(end="")
 
-        for i in range(self.__y):
+        for _ in range(self.y):
             print()
 
-        for _ in range(self.__height):
-            for _ in range(self.__width):
-                for _ in range(self.__x):
-                    print(" ", end="")
-                print("#", end="")
-            print()
+        for _ in range(self.height):
+            print(" " * self.x, end="")
+            print("#" * self.width)
 
     def __str__(self):
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "
