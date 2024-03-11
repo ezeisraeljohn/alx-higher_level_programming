@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 if (!process.argv[3]) {
-  console.log('No arguement');
+  console.log('No argument');
 } else {
   console.log(process.argv[2]);
 }
