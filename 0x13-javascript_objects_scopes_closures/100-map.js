@@ -6,4 +6,5 @@ const new_array = list.map((el, index) => {
   return el * index;
 });
 
+console.log(list);
 console.log(new_array);
