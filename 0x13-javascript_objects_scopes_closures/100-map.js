@@ -2,9 +2,9 @@
 
 const list = require('./100-data').list;
 
-const new_array = list.map((el, index) => {
+const newArray = list.map((el, index) => {
   return el * index;
 });
 
 console.log(list);
-console.log(new_array);
+console.log(newArray);
