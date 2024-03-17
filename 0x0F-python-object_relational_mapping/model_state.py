@@ -11,8 +11,15 @@ Base = declarative_base()
 
 
 class State(Base):
+    """ Defines the table to be linked to the class """
     __tablename__ = 'states'
 
-    id = Column(Integer, autoincrement=True, nullable=False, primary_key=True)
+    id = Column(
+        Integer,
+        autoincrement=True, 
+        nullable=False, 
+        primary_key=True,
+        unique=True
+        )
     name = Column(String(128), nullable=False)
-
+    
