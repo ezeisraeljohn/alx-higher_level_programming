@@ -18,3 +18,6 @@ class State(Base):
 
 
 engine = create_engine('mysql+mysqldb://localhost:3306', pool_pre_ping=True)
+
+if __name__ == "__main__":
+    Base.metadata.create_all(engine)
