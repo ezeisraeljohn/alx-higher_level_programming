@@ -26,7 +26,10 @@ def list_one_state(username, password, database):
 
     states_ordered_by_id = session.query(State).filter(State.id == 1).first()
 
-    print(f"{states_ordered_by_id.id}: {states_ordered_by_id.name}")
+    if not states_ordered_by_id:
+        print("Nothing")
+    else:
+        print(f"{states_ordered_by_id.id}: {states_ordered_by_id.name}")
 
 
 if __name__ == '__main__':
