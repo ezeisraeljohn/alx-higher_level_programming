@@ -28,8 +28,9 @@ def delete_all_a_state(username, password, database):
 
     for all in result:
         session.delete(all)
-    
+
     session.commit()
+
 
 if __name__ == '__main__':
     delete_all_a_state(argv[1], argv[2], argv[3])
