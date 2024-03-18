@@ -16,7 +16,7 @@ def list_all_states_city(username, password, database):
     engine = create_engine(
         f"mysql+mysqldb://{username}:{password}@localhost:3306/{database}")
 
-    Base.metadata.create_all(engine)
+    #Base.metadata.create_all(engine)
 
     Session = sessionmaker(engine)
 
