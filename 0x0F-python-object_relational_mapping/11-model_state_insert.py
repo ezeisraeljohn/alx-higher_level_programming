@@ -28,6 +28,8 @@ def add_state(username, password, database):
 
     session.add(louisiana)
 
+    session.commit()
+
     result = session.query(State).filter(State.name == "Louisiana").first()
 
     print(result.id)
