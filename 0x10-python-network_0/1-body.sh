@@ -1,7 +1,8 @@
 #!/bin/bash 
 # This script will display the body of the response
+curll=$(curl -sI "$1" | grep "HTTP/1.1 200 OK" |cut -d " " -f2)
 
-if [ curl -sIX GET "$1" | grep "HTTP/1.0 200 OK" ]
+if [ "$curll" = "200" ]
 then
-        curl -s -X GET "$1"
+       curl -sX GET "$1"
 fi
