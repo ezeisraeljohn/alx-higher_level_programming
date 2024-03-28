@@ -1,3 +1,3 @@
 #!/bin/bash
 # This script will display allowed methods
-curl -sI "$1" | grep "Allow"
+curl -siIX OPTIONS "$1" | grep "Allow"|cut -d " " -f2-
