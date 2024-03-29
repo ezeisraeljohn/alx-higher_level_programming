@@ -18,7 +18,3 @@ if __name__ == "__main__":
             print("No result")
         else:
             print("[{}] {}".format(r.json().get('id'), r.json().get('name')))
-
-    if r.headers["Content-Type"] is not "application/json"or \
-        "text/html; charset=UTF-8" or "text/html":
-        print("Not a valid JSON")
