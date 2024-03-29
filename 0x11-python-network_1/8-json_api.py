@@ -18,5 +18,5 @@ if __name__ == "__main__":
         else:
             print("[{}] {}".format(r.json().get('id'), r.json().get('name')))
 
-    if type(r.json()) is not dict:
+    else:
         print("Not a valid JSON")
