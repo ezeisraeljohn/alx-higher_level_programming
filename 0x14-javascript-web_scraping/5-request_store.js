@@ -7,8 +7,8 @@ const fs = require('node:fs');
 /**
  * storeWebContent function:
  * This function stores the value of a web content into a file
- * @param {Url} url 
- * @param {file} filepath 
+ * @param {Url} url
+ * @param {file} filepath
  */
 function storeWebContent (url, filepath) {
   request(url, (error, response, body) => {
