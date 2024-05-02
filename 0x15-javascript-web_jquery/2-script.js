@@ -2,6 +2,6 @@
 
 $(document).ready(function () {
   $('#red_header').click(function(){
-    $('header').css('color', 'blue')
+    $('header').css('color', 'red')
   })
 });
